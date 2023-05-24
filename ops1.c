@@ -28,7 +28,12 @@ void op_push(stack_t **stack, unsigned int line_number)
  */
 void op_pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = *stack;
+	stack_t *tmp = NULL;
+
+	if (!stack || !(*stack))
+		return;
+
+	tmp = *stack;
 
 	for (; tmp; tmp = tmp->next)
 		fprintf(stdout, "%i\n", tmp->n);
