@@ -65,7 +65,7 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 			free_stack(var.stack);
 			exit(EXIT_FAILURE);
 		}
-		printf("%c\n", res);
+		fprintf(stdout, "%c\n", res);
 	}
 }
 
@@ -81,8 +81,8 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 	stack_t *tmp = *stack;
 
 	for (; tmp && tmp->n > 0 && tmp->n <= 127; tmp = tmp->next)
-		printf("%c", tmp->n);
-	printf("\n");
+		fprintf(stdout, "%c", tmp->n);
+	fprintf(stdout, "\n");
 	(void)line_number;
 }
 
