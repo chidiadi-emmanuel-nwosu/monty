@@ -79,7 +79,6 @@ void op_pop(stack_t **stack, unsigned int line_number)
 
 		*stack = (*stack)->next;
 		free(tmp);
-		fprintf(stdout, "%i\n", (*stack)->n);
 	}
 }
 
