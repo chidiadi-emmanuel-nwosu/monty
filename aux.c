@@ -58,6 +58,7 @@ int _atoi(char **str)
 	{
 		fprintf(stderr, "L%i: usage: push integer\n", var.line_number);
 		free_args(str);
+		free_stack(var.stack);
 		exit(EXIT_FAILURE);
 	}
 
