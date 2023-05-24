@@ -68,7 +68,7 @@ int _atoi(char **str)
 		i++;
 	}
 
-	for (i = 0; str[1][i]; i++)
+	for (; str[1][i]; i++)
 	{
 		if (!(str[1][i] >= '0' && str[1][i] <= '9'))
 		{
